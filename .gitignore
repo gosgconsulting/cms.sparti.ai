@@ -42,17 +42,17 @@ coverage/
 tmp/
 temp/
 
-# DEMO FILES - EXCLUDE FROM PRODUCTION
-demo/
-*.demo.*
-demo-*
-*-demo.*
+# DEMO FILES - EXCLUDE FROM PRODUCTION (temporarily commented for development)
+# demo/
+# *.demo.*
+# demo-*
+# *-demo.*
 
 # Demo assets and media
-demo-assets/
-demo-videos/
-demo-images/
+# demo-assets/
+# demo-videos/
+# demo-images/
 
 # Development server files
-server.js
-dev-server.*
+# server.js
+# dev-server.*
