@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sparti Builder - Visual Editor Revolution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Sparti Builder Toolbar -->
+    <div id="sparti-toolbar" class="sparti-toolbar">
+        <div class="sparti-toolbar-container">
+            <div class="sparti-brand">
+                <span class="sparti-logo">✨</span>
+                <span class="sparti-title">Sparti Builder</span>
+            </div>
+            <div class="sparti-controls">
+                <button id="edit-toggle" class="sparti-btn sparti-btn-primary">
+                    <span class="btn-icon">✏️</span>
+                    Edit Page
+                </button>
+                <button id="save-changes" class="sparti-btn sparti-btn-success" style="display: none;">
+                    <span class="btn-icon">💾</span>
+                    Save
+                </button>
+                <button id="exit-edit" class="sparti-btn sparti-btn-ghost" style="display: none;">
+                    <span class="btn-icon">✕</span>
+                    Exit
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sparti Builder Sidebar -->
+    <div id="sparti-sidebar" class="sparti-sidebar">
+        <div class="sparti-sidebar-header">
+            <h3 class="sidebar-title">Element Editor</h3>
+            <button id="close-sidebar" class="close-btn">✕</button>
+        </div>
+        <div class="sparti-sidebar-content">
+            <div id="element-info" class="element-info">
+                <p class="no-selection">Select an element to edit</p>
+            </div>
+            <div id="element-editor" class="element-editor" style="display: none;">
+                <!-- Dynamic editor content will be inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" data-component="navigation" data-editable="true">
+        <div class="nav-container">
+            <div class="nav-brand" data-editable-type="brand">
+                <span class="brand-text" data-editable-type="text" data-editable-property="brandText">Sparti Builder</span>
+            </div>
+            <div class="nav-menu" data-editable-type="menu">
+                <a href="#features" class="nav-link" data-editable-type="link">Features</a>
+                <a href="#demo" class="nav-link" data-editable-type="link">Demo</a>
+                <a href="#docs" class="nav-link" data-editable-type="link">Docs</a>
+                <a href="#github" class="nav-link" data-editable-type="link">GitHub</a>
+            </div>
+            <button class="cta-button" data-editable-type="button" data-editable-property="ctaText">
+                Try Now
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" data-component="hero" data-editable="true">
+        <div class="hero-background">
+            <video autoplay muted loop class="hero-video" data-editable-type="video" data-editable-property="backgroundVideo">
+                <source src="https://player.vimeo.com/external/434045526.sd.mp4?s=c27eecc69a27dbc4ff2b87d38afc35f1c9a1a8a4&profile_id=165&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-content-inner animate__animated animate__fadeInUp">
+                <span class="hero-subtitle" data-editable-type="text" data-editable-property="subtitle">
+                    The Future of Web Editing
+                </span>
+                <h1 class="hero-title" data-editable-type="text" data-editable-property="title">
+                    Build & Edit Websites
+                    <span class="gradient-text">Visually</span>
+                </h1>
+                <p class="hero-description" data-editable-type="text" data-editable-property="description">
+                    Sparti Builder revolutionizes web development with click-to-edit functionality, 
+                    real-time visual editing, and seamless integration into any React application.
+                </p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary" data-editable-type="button" data-editable-property="primaryButton">
+                        Start Building
+                        <span class="btn-icon">→</span>
+                    </button>
+                    <button class="btn btn-secondary" data-editable-type="button" data-editable-property="secondaryButton">
+                        Watch Demo
+                        <span class="btn-icon">▶</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Floating Elements -->
+        <div class="floating-elements">
+            <div class="floating-card card-1">
+                <div class="card-icon">🎨</div>
+                <span>Visual Editor</span>
+            </div>
+            <div class="floating-card card-2">
+                <div class="card-icon">⚡</div>
+                <span>Real-time</span>
+            </div>
+            <div class="floating-card card-3">
+                <div class="card-icon">🔧</div>
+                <span>No Code</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features" data-component="features" data-editable="true">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-editable-type="text" data-editable-property="featuresTitle">
+                    Powerful Features
+                </h2>
+                <p class="section-subtitle" data-editable-type="text" data-editable-property="featuresSubtitle">
+                    Everything you need to create stunning websites without coding
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🎯</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Click-to-Edit</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        Simply click on any element to start editing. Change text, images, colors, and styles instantly.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">⚡</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Real-time Preview</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        See your changes instantly with live preview. No refresh needed, no delays.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🔧</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Universal Integration</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        Works with any React application. Easy integration with just a few lines of code.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">📱</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Responsive Design</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        Edit and preview your designs across all devices. Mobile-first approach.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">🎨</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Advanced Styling</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        Professional design tools with typography, colors, spacing, and layout controls.
+                    </p>
+                </div>
+                
+                <div class="feature-card" data-component="card" data-editable="true">
+                    <div class="feature-icon">
+                        <div class="icon-bg">💾</div>
+                    </div>
+                    <h3 class="feature-title" data-editable-type="text" data-editable-property="title">Auto-Save</h3>
+                    <p class="feature-description" data-editable-type="text" data-editable-property="description">
+                        Never lose your work. Automatic saving with undo/redo functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo-section" id="demo" data-component="demo" data-editable="true">
+        <div class="container">
+            <div class="demo-content">
+                <div class="demo-text">
+                    <h2 class="demo-title" data-editable-type="text" data-editable-property="demoTitle">
+                        See It In Action
+                    </h2>
+                    <p class="demo-description" data-editable-type="text" data-editable-property="demoDescription">
+                        Watch how easy it is to build and edit websites with Sparti Builder. 
+                        No technical knowledge required.
+                    </p>
+                    <button class="btn btn-primary" data-editable-type="button" data-editable-property="demoButton">
+                        Try Interactive Demo
+                    </button>
+                </div>
+                <div class="demo-video">
+                    <div class="video-container">
+                        <img src="https://via.placeholder.com/600x400/667eea/ffffff?text=Demo+Video" 
+                             alt="Sparti Builder Demo" 
+                             class="demo-image"
+                             data-editable-type="image" 
+                             data-editable-property="demoImage">
+                        <div class="play-button">
+                            <div class="play-icon">▶</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" data-component="cta" data-editable="true">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title" data-editable-type="text" data-editable-property="ctaTitle">
+                    Ready to Transform Your Web Development?
+                </h2>
+                <p class="cta-description" data-editable-type="text" data-editable-property="ctaDescription">
+                    Join thousands of developers who are already building faster with Sparti Builder.
+                </p>
+                <div class="cta-actions">
+                    <button class="btn btn-primary btn-large" data-editable-type="button" data-editable-property="ctaPrimary">
+                        Get Started Free
+                    </button>
+                    <button class="btn btn-outline btn-large" data-editable-type="button" data-editable-property="ctaSecondary">
+                        View Documentation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" data-component="footer" data-editable="true">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text" data-editable-type="text" data-editable-property="footerBrand">Sparti Builder</span>
+                    <p class="footer-tagline" data-editable-type="text" data-editable-property="footerTagline">
+                        The future of visual web development
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4 class="footer-title" data-editable-type="text" data-editable-property="productTitle">Product</h4>
+                        <a href="#" class="footer-link" data-editable-type="link">Features</a>
+                        <a href="#" class="footer-link" data-editable-type="link">Pricing</a>
+                        <a href="#" class="footer-link" data-editable-type="link">Demo</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title" data-editable-type="text" data-editable-property="resourcesTitle">Resources</h4>
+                        <a href="#" class="footer-link" data-editable-type="link">Documentation</a>
+                        <a href="#" class="footer-link" data-editable-type="link">API Reference</a>
+                        <a href="#" class="footer-link" data-editable-type="link">GitHub</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4 class="footer-title" data-editable-type="text" data-editable-property="supportTitle">Support</h4>
+                        <a href="#" class="footer-link" data-editable-type="link">Help Center</a>
+                        <a href="#" class="footer-link" data-editable-type="link">Contact</a>
+                        <a href="#" class="footer-link" data-editable-type="link">Community</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copyright" data-editable-type="text" data-editable-property="copyright">
+                    © 2024 Sparti Builder. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sparti Builder Integration -->
+    <script type="module" src="../index.js"></script>
+    <script type="module" src="demo.js"></script>
+</body>
+</html>

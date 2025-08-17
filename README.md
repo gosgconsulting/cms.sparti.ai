@@ -249,6 +249,9 @@ All Sparti Builder classes use the `sparti-` prefix to avoid conflicts:
 ```
 sparti-builder/
 ├── components/           # React components
+│   ├── admin/           # CMS admin components
+│   ├── editors/         # Element-specific editors
+│   ├── models/          # Component models for parsing
 │   ├── SpartiBuilder.tsx
 │   ├── SpartiBuilderProvider.tsx  
 │   ├── SpartiToolbar.tsx
@@ -258,13 +261,49 @@ sparti-builder/
 ├── core/                # Core libraries (TypeScript)
 │   ├── composer.ts
 │   ├── query.ts  
+│   ├── element-detector.ts
 │   └── preview-player.ts
 ├── hooks/               # Custom hooks
 │   └── useSpartiEditor.ts
-├── types.ts            # TypeScript definitions
-├── index.ts           # Main exports
-└── README.md          # This file
+├── styles/              # Styling systems
+│   ├── admin-styles.ts
+│   └── sparti-styles.ts
+├── types/               # TypeScript definitions
+│   ├── admin.ts
+│   └── index.ts
+├── demo/                # Demo page (excluded from production)
+│   ├── index.html
+│   ├── styles.css
+│   ├── demo.js
+│   └── server.js
+├── references/          # Plugin analysis references
+├── visualbuilder.md     # Architecture documentation
+├── index.ts            # Main exports
+└── README.md           # This file
 ```
+
+### Demo Page
+
+A comprehensive demo showcasing Sparti Builder's capabilities is available in the `/demo` folder:
+
+- **Modern Landing Page**: Demonstrates visual editing on a real-world design
+- **Interactive Elements**: Click-to-edit functionality with visual feedback
+- **Animations**: Smooth transitions and modern UI interactions
+- **Video Integration**: Background video and media handling
+- **Responsive Design**: Mobile-optimized layout
+
+#### Running the Demo
+
+```bash
+# Start the demo server
+cd demo
+node server.js
+
+# Visit in browser
+open http://localhost:3000/demo/
+```
+
+**⚠️ Production Exclusion**: Demo files are automatically excluded from production builds via `.gitignore` and should not be deployed to production environments.
 
 ## Roadmap
 
