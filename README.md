@@ -245,11 +245,17 @@ All Sparti Builder classes use the `sparti-` prefix to avoid conflicts:
 
 ## Development
 
-### File Structure
+### Project Structure
+
+The project is now organized into two main sections:
+
+#### Sparti CMS (Core Implementation)
+The `Sparti CMS/` folder contains the production-ready CMS that can be integrated into any website:
+
 ```
-sparti-builder/
+Sparti CMS/
 ├── components/           # React components
-│   ├── admin/           # CMS admin components
+│   ├── admin/           # CMS admin components  
 │   ├── editors/         # Element-specific editors
 │   ├── models/          # Component models for parsing
 │   ├── SpartiBuilder.tsx
@@ -271,14 +277,24 @@ sparti-builder/
 ├── types/               # TypeScript definitions
 │   ├── admin.ts
 │   └── index.ts
+├── index.ts            # Main CMS exports
+├── types.ts            # Global type definitions
+├── package.json        # CMS package configuration
+└── README.md           # CMS documentation
+```
+
+#### Demo & Development Files (Root Level)
+```
+sparti-builder/
+├── Sparti CMS/          # 👆 Core CMS implementation above
 ├── demo/                # Demo page (excluded from production)
+│   ├── js/             # Demo JavaScript files
 │   ├── index.html
 │   ├── styles.css
 │   ├── demo.js
 │   └── server.js
 ├── references/          # Plugin analysis references
-├── visualbuilder.md     # Architecture documentation
-├── index.ts            # Main exports
+├── build.md            # Build documentation
 └── README.md           # This file
 ```
 

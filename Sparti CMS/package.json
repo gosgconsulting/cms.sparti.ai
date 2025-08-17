@@ -1,0 +1,48 @@
+{
+  "name": "@sparti/cms",
+  "version": "1.0.0",
+  "description": "Visual content management system for websites",
+  "main": "index.ts",
+  "types": "types.ts",
+  "keywords": [
+    "cms",
+    "visual-editor",
+    "content-management",
+    "react",
+    "typescript",
+    "sparti"
+  ],
+  "author": "Sparti Team",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": ">=16.8.0",
+    "react-dom": ">=16.8.0"
+  },
+  "dependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0"
+  },
+  "files": [
+    "components/",
+    "core/",
+    "hooks/",
+    "styles/",
+    "types/",
+    "index.ts",
+    "types.ts",
+    "README.md",
+    "build.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "type-check": "tsc --noEmit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparti/cms"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
